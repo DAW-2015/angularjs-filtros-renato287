@@ -47,7 +47,7 @@
           {{employee.email}}
         </td>
         <td>
-          {{employee.phone}}
+          {{employee.phone | converteTEL}}
         </td>
         <td>
           {{employee.salary | currency | toReal}}

@@ -92,3 +92,15 @@ app.filter('converteCPF', function() {
  return result;
  }
 });
+
+app.filter('converteTEL', function() {
+ return function (text) {
+ 	text = text+"";
+ 	while(text.length != 10){
+ 		text = "0"+text;
+ 	}
+	var aux = text.split("");
+	var result = "("+aux[0]+aux[1]+")"+aux[2]+aux[3]+aux[4]+aux[5]+"-"+aux[6]+aux[7]+aux[8]+aux[9];
+ return result;
+ }
+});
